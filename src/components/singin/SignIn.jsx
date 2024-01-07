@@ -29,6 +29,7 @@ const SignIn = () => {
           withCredentials: true,
         }
       );
+      localStorage.setItem("user", JSON.stringify(res.data.user));
       navigate("/");
     } catch (error) {
       toast(error.response.data.message);

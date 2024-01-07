@@ -6,6 +6,8 @@ import AuthPage from "./pages/AuthPage";
 import Signup from "./components/singup/Signup";
 import SignIn from "./components/singin/SignIn";
 import HomePage from "./pages/HomePage";
+import DetailPage from "./pages/DetailPage";
+import CartPage from "./pages/CartPage";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="sign-in" element={<SignIn />} />
       </Route>
       <Route path="/" element={<HomePage />}></Route>
+      <Route path="/product/:id" element={<DetailPage />} />
+      <Route path="/cart" element={<CartPage />} />
     </Routes>
   );
 }
